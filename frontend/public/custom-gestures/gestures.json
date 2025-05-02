@@ -1,0 +1,39 @@
+{
+  "gestures": [
+    {
+      "id": "81aec3ce-58ea-4c56-85e9-fee6029b3f79",
+      "name": "Gesture 1",
+      "createdAt": "2025-03-31T14:09:39.204Z",
+      "frameCount": 30,
+      "firstFramePath": "/custom-gestures/81aec3ce-58ea-4c56-85e9-fee6029b3f79/frame_0.jpg"
+    },
+    {
+      "id": "798f32da-2edf-4231-9c2e-9c09e92ba29b",
+      "name": "Gesture 2",
+      "createdAt": "2025-03-31T14:10:17.678Z",
+      "frameCount": 30,
+      "firstFramePath": "/custom-gestures/798f32da-2edf-4231-9c2e-9c09e92ba29b/frame_0.jpg"
+    },
+    {
+      "id": "287af91f-d868-409f-b44a-cadfc51468a1",
+      "name": "jiyana",
+      "createdAt": "2025-04-02T04:33:11.812Z",
+      "frameCount": 30,
+      "firstFramePath": "/custom-gestures/287af91f-d868-409f-b44a-cadfc51468a1/frame_0.jpg"
+    },
+    {
+      "id": "80195e37-9306-4af0-9d84-89266330063f",
+      "name": "brahma",
+      "createdAt": "2025-04-02T05:11:00.594Z",
+      "frameCount": 30,
+      "firstFramePath": "/custom-gestures/80195e37-9306-4af0-9d84-89266330063f/frame_0.jpg"
+    },
+    {
+      "id": "eef307ce-1a8e-4ced-8be4-383edcc3915a",
+      "name": "machaaa",
+      "createdAt": "2025-04-02T08:21:57.589Z",
+      "frameCount": 30,
+      "firstFramePath": "/custom-gestures/eef307ce-1a8e-4ced-8be4-383edcc3915a/frame_0.jpg"
+    }
+  ]
+}

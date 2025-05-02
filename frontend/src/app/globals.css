@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  /* Define the color palette */
+  --deep-ocean: #001f3f;
+  --navy-blue: #003366;
+  --ocean-blue: #004d99;
+  --azure: #0066cc;
+  --bright-blue: #0088ff;
+  --sky-blue: #33a1ff;
+  --light-blue: #66b3ff;
+  --pale-blue: #99ccff;
+  --crystal-blue: #cce6ff;
+  --seafoam: #e6f3ff;
+  
+  /* Enhanced colors */
+  --soft-blue: #f0f8ff;
+  --midnight-blue: #001529;
+  --electric-blue: #0077cc;
+  --ocean-depth: #002952;
+  --deep-sea: #001233;
+  --ocean-mist: #e6f7ff;
+  
+  /* Light theme - Ocean version */
+  --background: #ffffff;
+  --foreground: var(--deep-ocean);
+  --card: #ffffff;
+  --card-foreground: var(--navy-blue);
+  --popover: rgba(255, 255, 255, 0.98);
+  --popover-foreground: var(--navy-blue);
+  --primary: var(--azure);
+  --primary-foreground: #ffffff;
+  --secondary: var(--sky-blue);
+  --secondary-foreground: var(--deep-ocean);
+  --muted: var(--ocean-mist);
+  --muted-foreground: var(--ocean-blue);
+  --accent: var(--bright-blue);
+  --accent-foreground: #ffffff;
+  --destructive: var(--deep-ocean);
+  --destructive-foreground: #ffffff;
+  --border: var(--crystal-blue);
+  --input: var(--ocean-mist);
+  --ring: var(--electric-blue);
+  --chart-1: var(--azure);
+  --chart-2: var(--bright-blue);
+  --chart-3: var(--light-blue);
+  --chart-4: var(--pale-blue);
+  --chart-5: var(--crystal-blue);
+  --radius: 0.75rem;
+  --sidebar: linear-gradient(to bottom, #ffffff, var(--ocean-mist));
+  --sidebar-foreground: var(--deep-ocean);
+  --sidebar-primary: var(--azure);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--sky-blue);
+  --sidebar-accent-foreground: var(--deep-ocean);
+  --sidebar-border: var(--crystal-blue);
+  --sidebar-ring: var(--ocean-blue);
+}
+
+.dark {
+  /* Dark theme - Deep Ocean version */
+  --background: linear-gradient(145deg, var(--deep-sea), var(--deep-ocean));
+  --foreground: #ffffff;
+  --card: rgba(0, 51, 102, 0.2);
+  --card-foreground: #ffffff;
+  --popover: rgba(0, 25, 51, 0.95);
+  --popover-foreground: #ffffff;
+  --primary: var(--light-blue);
+  --primary-foreground: var(--midnight-blue);
+  --secondary: var(--ocean-blue);
+  --secondary-foreground: var(--crystal-blue);
+  --muted: rgba(0, 77, 153, 0.6);
+  --muted-foreground: var(--pale-blue);
+  --accent: var(--bright-blue);
+  --accent-foreground: #ffffff;
+  --destructive: #ff4d4d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(51, 161, 255, 0.3);
+  --input: rgba(0, 77, 153, 0.4);
+  --ring: var(--light-blue);
+  --chart-1: var(--light-blue);
+  --chart-2: var(--pale-blue);
+  --chart-3: var(--sky-blue);
+  --chart-4: var(--crystal-blue);
+  --chart-5: var(--azure);
+  --sidebar: linear-gradient(to bottom, var(--midnight-blue), var(--navy-blue));
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: var(--light-blue);
+  --sidebar-primary-foreground: var(--deep-ocean);
+  --sidebar-accent: var(--bright-blue);
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(0, 102, 204, 0.4);
+  --sidebar-ring: var(--pale-blue);
+}
+
+/* Add subtle animations and transitions */
+@layer base {
+  * {
+    @apply border-border outline-ring/50 transition-colors duration-200;
+  }
+  
+  body {
+    @apply bg-background text-foreground bg-fixed;
+    background-size: cover;
+  }
+  
+  /* Add subtle shadow to cards for depth */
+  .card {
+    box-shadow: 0 4px 20px rgba(49, 0, 85, 0.1);
+  }
+  
+  /* Add focus styles */
+  button:focus, input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 0 2px var(--ring);
+  }
+  
+  /* Dark theme shadow adjustment */
+  .dark .card {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+}
