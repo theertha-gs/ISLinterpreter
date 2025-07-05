@@ -1,6 +1,6 @@
-# Ishara Sign Language Translator Backend
+# ISL Interpreter Backend
 
-This is the backend component of the Ishara Sign Language Translator, which recognizes Indian Sign Language (ISL) gestures in real-time.
+This is the backend component of the ISL Interpreter, which recognizes Indian Sign Language (ISL) gestures in real-time.
 
 ## Setup and Installation
 
