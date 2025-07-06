@@ -15,7 +15,7 @@ A full-stack web application that bridges the communication gap by translating I
 ## Key Features
 
 - **Real-Time Gesture Recognition**: Utilizes a webcam feed to interpret ISL gestures and translate them into text with high accuracy and low latency.
-- **Live Session Sharing**: Broadcast your translation session to others in real-time. Viewers can join via a unique link to see the recognized gestures as they are signed.
+- **Live Subtitle Sharing**: Broadcast your translation to others in real-time. Viewers can see the recognized gestures as they are signed via a unique link.
 - **User Authentication**: Secure user login and registration system built with **Firebase Authentication**.
 - **Custom Gesture Training**: A dedicated interface to record, name, and save new gestures, allowing the system to be expanded and personalized.
 - **Advanced Machine Learning Pipeline**:
@@ -57,15 +57,15 @@ The application is built on a decoupled frontend-backend architecture, enabling 
 - [Python](https://www.python.org/downloads/) (v3.9 or later)
 - `git` installed on your machine
 
-### 1. Clone the Repository
+1. Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/theertha-gs-islinterpreter.git
 cd theertha-gs-islinterpreter
-
+```
 2. Backend Setup
 The backend handles the core machine learning and real-time communication.
-
+```bash
 # Navigate to the backend directory
 cd backend
 
@@ -80,18 +80,19 @@ pip install fastapi "uvicorn[standard]" opencv-python mediapipe scikit-learn job
 # The `run_pipeline.py` script automates this process.
 python run_pipeline.py --train
 ```
-```Bash
+
 3. Frontend Setup
 The frontend is a Next.js application for the user interface.
-
+```Bash
 # Navigate to the frontend directory from the root
 cd frontend
 
 # Install npm packages
 npm install
 ```
-```Bash
+
 Next, create a file named frontend/.env.local and add your Firebase project configuration:
+```Bash
 Generated env
 NEXT_PUBLIC_FIREBASE_API_KEY="YOUR_API_KEY"
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN="YOUR_AUTH_DOMAIN"
@@ -100,25 +101,28 @@ NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET="YOUR_STORAGE_BUCKET"
 NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID="YOUR_SENDER_ID"
 NEXT_PUBLIC_FIREBASE_APP_ID="YOUR_APP_ID"
 Env
+```
 4. Running the Application
 You need to run both the backend and frontend servers simultaneously in separate terminals.
+```bash
 Terminal 1: Start the Backend Server
-
 cd backend
 source venv/bin/activate  # Make sure the venv is active
 uvicorn app:app --host 0.0.0.0 --port 8000 --reload
-```
-```Bash
-The backend server will be running at http://localhost:8000.
-Terminal 2: Start the Frontend Server
 
+The backend server will be running at http://localhost:8000.
+
+Terminal 2: Start the Frontend Server
 cd frontend
 npm run dev
-```
-```Bash
+
 The frontend application will be available at http://localhost:3000.
+```
+
+
 📂 Project Structure
 The project is organized into two main directories: backend and frontend.
+```bash
 
 └── theertha-gs-islinterpreter/
     ├── backend/
@@ -141,7 +145,7 @@ The project is organized into two main directories: backend and frontend.
         └── public/
             └── custom-gestures/ # Stores saved custom gesture images
 ```
-🧠 How The Model Works
+# 🧠 How The Model Works
 The gesture recognition pipeline is a multi-step process designed for real-time performance.
 Data Collection: The model is trained on a dataset of ISL gestures. The project includes tools for:
 Processing a standard image dataset (extract_dataset.py).
