@@ -2,7 +2,7 @@
 
 ![Project Banner](https://img.shields.io/badge/ISL%20Interpreter-v1.0-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTEwLjUgNy41YzAgLjgyLS42OCAxLjUtMS41IDEuNVM3LjUgOC4zMiA3LjUgNy41IDguMTggNiA5IDZzMS41LjY4IDEuNSAxeiBtMy43MyAxMy41bC0xLjQ0LTEuNDFjLS4zOS0uMzktMS4wMy0uMzktMS40MSAwbC0xLjU1IDEuNTVjLS40NC40NC0xLjE2LjQ0LTEuNiAwbC0xLjU1LTEuNTUtMS40MSAxLjQxYy4zOS4zOSAxLjAyLjM5IDEuNDEgMGwxLjU1LTEuNTVjLjQ0LS40NCAxLjE2LS40NCAxLjYgMGwxLjU1IDEuNTUgMS40MS0xLjQxek0yMCAySDQuQzIuOSAyIDIgMi45IDIgNHYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjRjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY0aDE2djE2eiIvPjwvc3ZnPg==)
 
-A full-stack web application that bridges the communication gap by translating Indian Sign Language gestures into text in real-time, featuring live session sharing and custom gesture training.
+A full-stack web application that bridges the communication gap by translating Indian Sign Language gestures into text in real-time, featuring live subtitle sharing and custom gesture training.
 
 [![React](https://img.shields.io/badge/React-19-blue?style=flat&logo=react)](https://react.dev/)
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat&logo=next.js)](https://nextjs.org/)
