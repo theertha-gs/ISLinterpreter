@@ -147,14 +147,14 @@ The project is organized into two main directories: backend and frontend.
 ```
 # 🧠 How The Model Works
 The gesture recognition pipeline is a multi-step process designed for real-time performance.
-Data Collection: The model is trained on a dataset of ISL gestures. The project includes tools for:
-Processing a standard image dataset (extract_dataset.py).
-Generating synthetic hand landmarks to augment the dataset (create_synthetic_landmarks.py).
-Capturing and labeling new data in real-time (realtime_training.py).
-Feature Extraction: For each image or video frame, Google's MediaPipe Hands library is used to detect the hand and extract the 3D coordinates (x, y, z) of 21 key landmarks. This converts the visual information into a numerical feature vector.
-Model Training: The extracted landmark data is flattened and standardized. A Random Forest Classifier is trained on this data. This model was chosen for its balance of high accuracy and low prediction latency, making it ideal for real-time applications.
-Real-Time Inference:
-The frontend captures webcam frames and sends them to the backend via a WebSocket.
-The FastAPI server receives the frame, uses OpenCV and MediaPipe to extract landmarks.
-The pre-trained scaler and Random Forest model predict the gesture.
-The prediction and confidence score are sent back to the frontend through the WebSocket to be displayed on the UI.
+- **Data Collection:** The model is trained on a dataset of ISL gestures. The project includes tools for:
+  - Processing a standard image dataset (extract_dataset.py).
+  - Generating synthetic hand landmarks to augment the dataset (create_synthetic_landmarks.py).
+  - Capturing and labeling new data in real-time (realtime_training.py).
+- **Feature Extraction:** For each image or video frame, Google's MediaPipe Hands library is used to detect the hand and extract the 3D coordinates (x, y, z) of 21 key landmarks. This converts the visual information into a numerical feature vector.
+- **Model Training:** The extracted landmark data is flattened and standardized. A Random Forest Classifier is trained on this data. This model was chosen for its balance of high accuracy and low prediction latency, making it ideal for real-time applications.
+- **Real-Time Inference:**
+  - The frontend captures webcam frames and sends them to the backend via a WebSocket.
+  - The FastAPI server receives the frame, uses OpenCV and MediaPipe to extract landmarks.
+  - The pre-trained scaler and Random Forest model predict the gesture.
+  - The prediction and confidence score are sent back to the frontend through the WebSocket to be displayed on the UI.
