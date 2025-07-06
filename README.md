@@ -29,16 +29,16 @@ A full-stack web application that bridges the communication gap by translating I
 
 The application is built on a decoupled frontend-backend architecture, enabling scalability and maintainability.
 
-+--------------------------------+ (WebSocket: JSON frames) +---------------------------------+
-| Frontend (Next.js) | <--------------------------------> | Backend (FastAPI) |
-|--------------------------------| |---------------------------------|
-| - Camera Feed (WebRTC) | | - WebSocket Connection Manager |
-| - UI Components (shadcn/ui) | (Predictions, Status) | - Frame Processing (OpenCV) |
-| - WebSocket Client | <--------------------------------- | - Hand Landmark Detection (MP) |
-| - User Authentication (Firebase)| | - Gesture Prediction (ML Model) |
-| - Custom Gesture Mgmt | (REST API: Auth) | - Session Management (Broadcast)|
-+--------------------------------+ ---------------------------------> +---------------------------------+
-(REST API: Custom Gestures)
++-------------------------------------+                            +-------------------------------------+
+|          Frontend (Next.js)         |    (WebSocket: JSON frames)    |           Backend (FastAPI)         |
++-------------------------------------+ <--------------------------> +-------------------------------------+
+| - Camera Feed (WebRTC)            |                            | - WebSocket Connection Manager      |
+| - UI Components (shadcn/ui)       |   (Predictions, Status)    | - Frame Processing (OpenCV)         |
+| - WebSocket Client                | <-------------------------- | - Hand Landmark Detection (MediaPipe) |
+| - User Authentication (Firebase)  |                            | - Gesture Prediction (ML Model)     |
+| - Custom Gesture Mgmt             |      (REST API: Auth)      | - Session Management (Broadcast)    |
++-------------------------------------+ -------------------------> +-------------------------------------+
+                                            (REST API: Custom Gestures)
 
 ## Tech Stack
 
