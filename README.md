@@ -28,7 +28,7 @@ A full-stack web application that bridges the communication gap by translating I
 ##  System Architecture
 
 The application is built on a decoupled frontend-backend architecture, enabling scalability and maintainability.
-
+```
 +-------------------------------------+                            +-------------------------------------+
 |          Frontend (Next.js)         |    (WebSocket: JSON frames)    |           Backend (FastAPI)         |
 +-------------------------------------+ <--------------------------> +-------------------------------------+
@@ -39,7 +39,7 @@ The application is built on a decoupled frontend-backend architecture, enabling 
 | - Custom Gesture Mgmt             |      (REST API: Auth)      | - Session Management (Broadcast)    |
 +-------------------------------------+ -------------------------> +-------------------------------------+
                                             (REST API: Custom Gestures)
-
+```
 ## Tech Stack
 
 | Category      | Technologies                                                                          |
