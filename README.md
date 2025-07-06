@@ -4,22 +4,15 @@
 
 A full-stack web application that bridges the communication gap by translating Indian Sign Language gestures into text in real-time, featuring live session sharing and custom gesture training.
 
-[![React](https://img.shields.io/badge/React-blue?style=flat&logo=react)](https://react.dev/)
-[![Next.js](https://img.shields.io/badge/Next.js-black?style=flat&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-blue?style=flat&logo=react)](https://react.dev/)
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat&logo=typescript)](https://www.typescriptlang.org/)
 [![Python](https://img.shields.io/badge/Python-3.10-blue?style=flat&logo=python)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110-green?style=flat&logo=fastapi)](https://fastapi.tiangolo.com/)
 [![OpenCV](https://img.shields.io/badge/OpenCV-4.x-blue?style=flat&logo=opencv)](https://opencv.org/)
 [![MediaPipe](https://img.shields.io/badge/MediaPipe-0.10-orange?style=flat&logo=google)](https://developers.google.com/mediapipe)
 
----
-<!-- 
-Recommendation: Record a short GIF of your application in action and add it here.
-For example:
-![ISL Interpreter Demo](./demo.gif)
--->
-
-## 🌟 Key Features
+## Key Features
 
 - **Real-Time Gesture Recognition**: Utilizes a webcam feed to interpret ISL gestures and translate them into text with high accuracy and low latency.
 - **Live Session Sharing**: Broadcast your translation session to others in real-time. Viewers can join via a unique link to see the recognized gestures as they are signed.
@@ -32,11 +25,10 @@ For example:
 - **Modern & Responsive UI**: A sleek user interface built with **Next.js**, **TypeScript**, and **shadcn/ui**, ensuring a seamless experience across devices.
 - **WebSocket Communication**: Employs **FastAPI WebSockets** for persistent, bidirectional communication between the client and the server.
 
-## 🏗️ System Architecture
+##  System Architecture
 
 The application is built on a decoupled frontend-backend architecture, enabling scalability and maintainability.
-Use code with caution.
-Md
+
 +--------------------------------+ (WebSocket: JSON frames) +---------------------------------+
 | Frontend (Next.js) | <--------------------------------> | Backend (FastAPI) |
 |--------------------------------| |---------------------------------|
@@ -47,8 +39,8 @@ Md
 | - Custom Gesture Mgmt | (REST API: Auth) | - Session Management (Broadcast)|
 +--------------------------------+ ---------------------------------> +---------------------------------+
 (REST API: Custom Gestures)
-Generated code
-## 🛠️ Tech Stack
+
+## Tech Stack
 
 | Category      | Technologies                                                                          |
 |---------------|---------------------------------------------------------------------------------------|
@@ -57,9 +49,7 @@ Generated code
 | **Database**  | `Firebase` (for users), `JSON file` (for custom gesture metadata)                       |
 | **DevOps**    | `Git`, `npm`, `pip` (Virtual Environment)                                             |
 
-## 🚀 Getting Started
-
-Follow these instructions to set up and run the project locally.
+##  Getting Started
 
 ### Prerequisites
 
@@ -72,10 +62,10 @@ Follow these instructions to set up and run the project locally.
 ```bash
 git clone https://github.com/your-username/theertha-gs-islinterpreter.git
 cd theertha-gs-islinterpreter
-Use code with caution.
+
 2. Backend Setup
 The backend handles the core machine learning and real-time communication.
-Generated bash
+
 # Navigate to the backend directory
 cd backend
 
@@ -89,18 +79,18 @@ pip install fastapi "uvicorn[standard]" opencv-python mediapipe scikit-learn job
 # Train the model (this will process data and create model files)
 # The `run_pipeline.py` script automates this process.
 python run_pipeline.py --train
-Use code with caution.
-Bash
+```
+```Bash
 3. Frontend Setup
 The frontend is a Next.js application for the user interface.
-Generated bash
+
 # Navigate to the frontend directory from the root
 cd frontend
 
 # Install npm packages
 npm install
-Use code with caution.
-Bash
+```
+```Bash
 Next, create a file named frontend/.env.local and add your Firebase project configuration:
 Generated env
 NEXT_PUBLIC_FIREBASE_API_KEY="YOUR_API_KEY"
@@ -109,28 +99,27 @@ NEXT_PUBLIC_FIREBASE_PROJECT_ID="YOUR_PROJECT_ID"
 NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET="YOUR_STORAGE_BUCKET"
 NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID="YOUR_SENDER_ID"
 NEXT_PUBLIC_FIREBASE_APP_ID="YOUR_APP_ID"
-Use code with caution.
 Env
 4. Running the Application
 You need to run both the backend and frontend servers simultaneously in separate terminals.
 Terminal 1: Start the Backend Server
-Generated bash
+
 cd backend
 source venv/bin/activate  # Make sure the venv is active
 uvicorn app:app --host 0.0.0.0 --port 8000 --reload
-Use code with caution.
-Bash
+```
+```Bash
 The backend server will be running at http://localhost:8000.
 Terminal 2: Start the Frontend Server
-Generated bash
+
 cd frontend
 npm run dev
-Use code with caution.
-Bash
+```
+```Bash
 The frontend application will be available at http://localhost:3000.
 📂 Project Structure
 The project is organized into two main directories: backend and frontend.
-Generated code
+
 └── theertha-gs-islinterpreter/
     ├── backend/
     │   ├── app.py              # FastAPI server, WebSocket logic, prediction endpoint
@@ -151,7 +140,7 @@ Generated code
         │   └── components/     # Reusable React components (shadcn/ui)
         └── public/
             └── custom-gestures/ # Stores saved custom gesture images
-Use code with caution.
+```
 🧠 How The Model Works
 The gesture recognition pipeline is a multi-step process designed for real-time performance.
 Data Collection: The model is trained on a dataset of ISL gestures. The project includes tools for:
